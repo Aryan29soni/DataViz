@@ -1,0 +1,7 @@
+### Send Forgot Password Request
+POST http://localhost:5173/auth/upload-file
+Content-Type: application/json
+
+{
+    "email": "aryansonijee@gmail.com"
+}

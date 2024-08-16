@@ -1,0 +1,956 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "good,morn": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "afternoon,good": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "even,good": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "goodby": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "bye": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "later,see,you": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "later,talk,to,you": {
+            "intent": "farewell",
+            "domain": "default"
+          },
+          "are,how,you": {
+            "intent": "question.how",
+            "domain": "default"
+          },
+          "are,do,how,you": {
+            "intent": "question.how",
+            "domain": "default"
+          },
+          "go,how,is,it": {
+            "intent": "question.how",
+            "domain": "default"
+          },
+          "is,name,what,your": {
+            "intent": "question.name",
+            "domain": "default"
+          },
+          "are,who,you": {
+            "intent": "question.name",
+            "domain": "default"
+          },
+          "do,what,you": {
+            "intent": "question.function",
+            "domain": "default"
+          },
+          "i,love,this": {
+            "intent": "sentiment.positive",
+            "domain": "default"
+          },
+          "great,is,this": {
+            "intent": "sentiment.positive",
+            "domain": "default"
+          },
+          "i,like,you": {
+            "intent": "sentiment.positive",
+            "domain": "default"
+          },
+          "are,awesom,you": {
+            "intent": "sentiment.positive",
+            "domain": "default"
+          },
+          "hate,i,this": {
+            "intent": "sentiment.negative",
+            "domain": "default"
+          },
+          "is,terribl,this": {
+            "intent": "sentiment.negative",
+            "domain": "default"
+          },
+          "do,i,like,not,you": {
+            "intent": "sentiment.negative",
+            "domain": "default"
+          },
+          "are,aw,you": {
+            "intent": "sentiment.negative",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greeting": "default",
+          "farewell": "default",
+          "question.how": "default",
+          "question.name": "default",
+          "question.function": "default",
+          "sentiment.positive": "default",
+          "sentiment.negative": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "good morning",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "good afternoon",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "good evening",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "goodbye",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "see you later",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "talk to you later",
+            "intent": "farewell"
+          },
+          {
+            "domain": "default",
+            "utterance": "how are you",
+            "intent": "question.how"
+          },
+          {
+            "domain": "default",
+            "utterance": "how are you doing",
+            "intent": "question.how"
+          },
+          {
+            "domain": "default",
+            "utterance": "how is it going",
+            "intent": "question.how"
+          },
+          {
+            "domain": "default",
+            "utterance": "what is your name",
+            "intent": "question.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "who are you",
+            "intent": "question.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "what do you do",
+            "intent": "question.function"
+          },
+          {
+            "domain": "default",
+            "utterance": "I love this",
+            "intent": "sentiment.positive"
+          },
+          {
+            "domain": "default",
+            "utterance": "this is great",
+            "intent": "sentiment.positive"
+          },
+          {
+            "domain": "default",
+            "utterance": "I like you",
+            "intent": "sentiment.positive"
+          },
+          {
+            "domain": "default",
+            "utterance": "you are awesome",
+            "intent": "sentiment.positive"
+          },
+          {
+            "domain": "default",
+            "utterance": "I hate this",
+            "intent": "sentiment.negative"
+          },
+          {
+            "domain": "default",
+            "utterance": "this is terrible",
+            "intent": "sentiment.negative"
+          },
+          {
+            "domain": "default",
+            "utterance": "I don't like you",
+            "intent": "sentiment.negative"
+          },
+          {
+            "domain": "default",
+            "utterance": "you are awful",
+            "intent": "sentiment.negative"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hello": 1,
+              "hi": 1,
+              "hey": 1,
+              "good": 1,
+              "morn": 1,
+              "afternoon": 1,
+              "even": 1,
+              "goodby": 1,
+              "bye": 1,
+              "see": 1,
+              "you": 1,
+              "later": 1,
+              "talk": 1,
+              "to": 1,
+              "how": 1,
+              "are": 1,
+              "do": 1,
+              "is": 1,
+              "it": 1,
+              "go": 1,
+              "what": 1,
+              "your": 1,
+              "name": 1,
+              "who": 1,
+              "i": 1,
+              "love": 1,
+              "this": 1,
+              "great": 1,
+              "like": 1,
+              "awesom": 1,
+              "hate": 1,
+              "terribl": 1,
+              "not": 1,
+              "aw": 1
+            },
+            "intents": {
+              "greeting": 1,
+              "farewell": 1,
+              "question.how": 1,
+              "question.name": 1,
+              "question.function": 1,
+              "sentiment.positive": 1,
+              "sentiment.negative": 1
+            },
+            "intentFeatures": {
+              "greeting": {
+                "hello": 1,
+                "hi": 1,
+                "hey": 1,
+                "good": 1,
+                "morn": 1,
+                "afternoon": 1,
+                "even": 1
+              },
+              "farewell": {
+                "goodby": 1,
+                "bye": 1,
+                "see": 1,
+                "you": 1,
+                "later": 1,
+                "talk": 1,
+                "to": 1
+              },
+              "question.how": {
+                "how": 1,
+                "are": 1,
+                "you": 1,
+                "do": 1,
+                "is": 1,
+                "it": 1,
+                "go": 1
+              },
+              "question.name": {
+                "what": 1,
+                "is": 1,
+                "your": 1,
+                "name": 1,
+                "who": 1,
+                "are": 1,
+                "you": 1
+              },
+              "question.function": {
+                "what": 1,
+                "do": 1,
+                "you": 1
+              },
+              "sentiment.positive": {
+                "i": 1,
+                "love": 1,
+                "this": 1,
+                "is": 1,
+                "great": 1,
+                "like": 1,
+                "you": 1,
+                "are": 1,
+                "awesom": 1
+              },
+              "sentiment.negative": {
+                "i": 1,
+                "hate": 1,
+                "this": 1,
+                "is": 1,
+                "terribl": 1,
+                "do": 1,
+                "not": 1,
+                "like": 1,
+                "you": 1,
+                "are": 1,
+                "aw": 1
+              }
+            },
+            "featuresToIntent": {
+              "hello": [
+                "greeting"
+              ],
+              "hi": [
+                "greeting"
+              ],
+              "hey": [
+                "greeting"
+              ],
+              "good": [
+                "greeting"
+              ],
+              "morn": [
+                "greeting"
+              ],
+              "afternoon": [
+                "greeting"
+              ],
+              "even": [
+                "greeting"
+              ],
+              "goodby": [
+                "farewell"
+              ],
+              "bye": [
+                "farewell"
+              ],
+              "see": [
+                "farewell"
+              ],
+              "you": [
+                "farewell",
+                "question.how",
+                "question.name",
+                "question.function",
+                "sentiment.positive",
+                "sentiment.negative"
+              ],
+              "later": [
+                "farewell"
+              ],
+              "talk": [
+                "farewell"
+              ],
+              "to": [
+                "farewell"
+              ],
+              "how": [
+                "question.how"
+              ],
+              "are": [
+                "question.how",
+                "question.name",
+                "sentiment.positive",
+                "sentiment.negative"
+              ],
+              "do": [
+                "question.how",
+                "question.function",
+                "sentiment.negative"
+              ],
+              "is": [
+                "question.how",
+                "question.name",
+                "sentiment.positive",
+                "sentiment.negative"
+              ],
+              "it": [
+                "question.how"
+              ],
+              "go": [
+                "question.how"
+              ],
+              "what": [
+                "question.name",
+                "question.function"
+              ],
+              "your": [
+                "question.name"
+              ],
+              "name": [
+                "question.name"
+              ],
+              "who": [
+                "question.name"
+              ],
+              "i": [
+                "sentiment.positive",
+                "sentiment.negative"
+              ],
+              "love": [
+                "sentiment.positive"
+              ],
+              "this": [
+                "sentiment.positive",
+                "sentiment.negative"
+              ],
+              "great": [
+                "sentiment.positive"
+              ],
+              "like": [
+                "sentiment.positive",
+                "sentiment.negative"
+              ],
+              "awesom": [
+                "sentiment.positive"
+              ],
+              "hate": [
+                "sentiment.negative"
+              ],
+              "terribl": [
+                "sentiment.negative"
+              ],
+              "not": [
+                "sentiment.negative"
+              ],
+              "aw": [
+                "sentiment.negative"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hi",
+                "hey",
+                "good",
+                "morn",
+                "afternoon",
+                "even",
+                "goodby",
+                "bye",
+                "see",
+                "you",
+                "later",
+                "talk",
+                "to",
+                "how",
+                "are",
+                "do",
+                "is",
+                "it",
+                "go",
+                "what",
+                "your",
+                "name",
+                "who",
+                "i",
+                "love",
+                "this",
+                "great",
+                "like",
+                "awesom",
+                "hate",
+                "terribl",
+                "not",
+                "aw"
+              ],
+              "intents": [
+                "greeting",
+                "farewell",
+                "question.how",
+                "question.name",
+                "question.function",
+                "sentiment.positive",
+                "sentiment.negative"
+              ],
+              "perceptrons": [
+                [
+                  8.380041122436523,
+                  8.378896713256836,
+                  8.36025619506836,
+                  6.3294243812561035,
+                  2.1137425899505615,
+                  2.1100409030914307,
+                  2.1055428981781006,
+                  -5.7509050369262695,
+                  -5.7314324378967285,
+                  -0.8009639382362366,
+                  -3.7510108947753906,
+                  -1.2840943336486816,
+                  -0.43900632858276367,
+                  -0.43900632858276367,
+                  -1.4359278678894043,
+                  -1.7342456579208374,
+                  -0.7076486349105835,
+                  -2.6598289012908936,
+                  -0.8701596260070801,
+                  -0.8701596260070801,
+                  -1.3775798082351685,
+                  -0.8993753790855408,
+                  -0.8993753790855408,
+                  -0.4506891071796417,
+                  -2.1385247707366943,
+                  -0.9611567258834839,
+                  -2.774488925933838,
+                  -0.47632718086242676,
+                  -0.23865044116973877,
+                  -0.36186325550079346,
+                  -0.9218933582305908,
+                  -0.4016662538051605,
+                  -0.0084266671910882,
+                  -0.34968459606170654,
+                  5.836368922854181
+                ],
+                [
+                  -3.3841030597686768,
+                  -3.370466470718384,
+                  -3.3562428951263428,
+                  -2.5834455490112305,
+                  -0.8698798418045044,
+                  -0.8589000701904297,
+                  -0.8541268706321716,
+                  10.73071575164795,
+                  10.721281051635742,
+                  4.230325698852539,
+                  0.251514732837677,
+                  6.347996234893799,
+                  2.1174283027648926,
+                  2.1174283027648926,
+                  -1.4076517820358276,
+                  -3.1609816551208496,
+                  -1.9767988920211792,
+                  -1.5899451971054077,
+                  -0.2547546327114105,
+                  -0.2547546327114105,
+                  -1.733731985092163,
+                  -0.35408610105514526,
+                  -0.35408610105514526,
+                  -0.8461889624595642,
+                  -2.110511064529419,
+                  -0.328540176153183,
+                  -1.4455891847610474,
+                  -0.4939124882221222,
+                  -1.597800850868225,
+                  -0.5894346833229065,
+                  -0.1505117118358612,
+                  -0.43752312660217285,
+                  -0.1481623500585556,
+                  -0.5464680194854736,
+                  3.4524166820129456
+                ],
+                [
+                  -0.10702429711818695,
+                  -0.10330245643854141,
+                  -0.0997067242860794,
+                  -0.1709425449371338,
+                  -0.05057104676961899,
+                  -0.0453711673617363,
+                  -0.04597693681716919,
+                  -0.0905529037117958,
+                  -0.08737801015377045,
+                  -0.13092637062072754,
+                  0.2030320167541504,
+                  -0.23459334671497345,
+                  -0.07544756680727005,
+                  -0.07544756680727005,
+                  11.316076278686523,
+                  2.492352247238159,
+                  0.7128857970237732,
+                  0.19888652861118317,
+                  1.5127158164978027,
+                  1.5127158164978027,
+                  -1.719852328300476,
+                  -0.3880815804004669,
+                  -0.3880815804004669,
+                  -2.454094171524048,
+                  -0.880573570728302,
+                  -0.0750056579709053,
+                  -0.9822473526000977,
+                  -0.4513205885887146,
+                  -0.7356824278831482,
+                  -2.436603546142578,
+                  -0.016141600906848907,
+                  -0.34337055683135986,
+                  -0.41521626710891724,
+                  -2.410794973373413,
+                  -0.22702894661650488
+                ],
+                [
+                  -0.2619924545288086,
+                  -0.2611653208732605,
+                  -0.2606915533542633,
+                  -0.2996155023574829,
+                  -0.09685902297496796,
+                  -0.0936712846159935,
+                  -0.08357948809862137,
+                  -0.260027140378952,
+                  -0.2595641314983368,
+                  -0.19957251846790314,
+                  -0.1581088751554489,
+                  -0.35375189781188965,
+                  -0.12471974641084671,
+                  -0.12471974641084671,
+                  -2.911386728286743,
+                  2.8597633838653564,
+                  -2.5447256565093994,
+                  2.434746742248535,
+                  -0.40805432200431824,
+                  -0.40805432200431824,
+                  2.4173390865325928,
+                  4.5878400802612305,
+                  4.5878400802612305,
+                  11.22028636932373,
+                  -0.5991736054420471,
+                  -0.09057282656431198,
+                  -1.878136157989502,
+                  -0.89509117603302,
+                  -0.44585567712783813,
+                  -2.9408328533172607,
+                  -0.021124016493558884,
+                  -0.8325674533843994,
+                  -0.08181241899728775,
+                  -2.9327707290649414,
+                  0.26068550890685765
+                ],
+                [
+                  -0.06840532273054123,
+                  -0.07015698403120041,
+                  -0.06773436814546585,
+                  -0.11817610263824463,
+                  -0.0346832349896431,
+                  -0.03557725250720978,
+                  -0.031510669738054276,
+                  -0.06153491884469986,
+                  -0.05939425528049469,
+                  -0.8546878099441528,
+                  2.4331371784210205,
+                  -1.2873756885528564,
+                  -0.4319276213645935,
+                  -0.4319276213645935,
+                  -3.0835893154144287,
+                  -3.688141345977783,
+                  4.658529281616211,
+                  -2.4327454566955566,
+                  0,
+                  0,
+                  7.397950649261475,
+                  -2.3279664516448975,
+                  -2.3279664516448975,
+                  -0.015822969377040863,
+                  -2.4035370349884033,
+                  -0.04386787861585617,
+                  -0.17635954916477203,
+                  -0.046419408172369,
+                  -2.317614793777466,
+                  -0.29484137892723083,
+                  -0.012752758339047432,
+                  -0.025380689650774002,
+                  -2.0762288570404053,
+                  -0.23627521097660065,
+                  -0.280399953107943
+                ],
+                [
+                  -0.5627463459968567,
+                  -0.5611792206764221,
+                  -0.5603093504905701,
+                  -0.5753210186958313,
+                  -0.1828259527683258,
+                  -0.17853869497776031,
+                  -0.15891070663928986,
+                  -0.5589151382446289,
+                  -0.5578650236129761,
+                  -1.4822537899017334,
+                  3.196727752685547,
+                  -2.236313819885254,
+                  -0.751204788684845,
+                  -0.751204788684845,
+                  -3.6089608669281006,
+                  -0.07683602720499039,
+                  -7.071530818939209,
+                  2.29221248626709,
+                  -0.25128981471061707,
+                  -0.25128981471061707,
+                  -0.9875469207763672,
+                  -0.9206039905548096,
+                  -0.9206039905548096,
+                  -3.558307409286499,
+                  4.599210739135742,
+                  6.6374335289001465,
+                  2.5148704051971436,
+                  8.843855857849121,
+                  5.576624870300293,
+                  10.468509674072266,
+                  -7.611635684967041,
+                  -5.35338020324707,
+                  -6.705657958984375,
+                  -3.6530709266662598,
+                  0.5606033604389713
+                ],
+                [
+                  -0.5505374073982239,
+                  -0.5336179137229919,
+                  -0.5171791315078735,
+                  -0.8009559512138367,
+                  -0.26341480016708374,
+                  -0.23596660792827606,
+                  -0.2092573344707489,
+                  -0.4886322617530823,
+                  -0.4744759798049927,
+                  -0.5685468316078186,
+                  -0.6951234936714172,
+                  -1.1418670415878296,
+                  -0.47507041692733765,
+                  -0.47507041692733765,
+                  -5.302337169647217,
+                  2.832144260406494,
+                  3.58736252784729,
+                  1.6555366516113281,
+                  -0.20315444469451904,
+                  -0.20315444469451904,
+                  -2.6433165073394775,
+                  -0.5195848345756531,
+                  -0.5195848345756531,
+                  -2.3037338256835938,
+                  1.7929483652114868,
+                  -6.088701248168945,
+                  4.508328914642334,
+                  -5.8576273918151855,
+                  -0.2609735429286957,
+                  -1.9100725650787354,
+                  8.142303466796875,
+                  8.310901641845703,
+                  9.73541259765625,
+                  12.123771667480469,
+                  -0.2054706751233425
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hey"
+      ],
+      [
+        "en",
+        "good morning"
+      ],
+      [
+        "en",
+        "good afternoon"
+      ],
+      [
+        "en",
+        "good evening"
+      ],
+      [
+        "en",
+        "goodbye"
+      ],
+      [
+        "en",
+        "bye"
+      ],
+      [
+        "en",
+        "see you later"
+      ],
+      [
+        "en",
+        "talk to you later"
+      ],
+      [
+        "en",
+        "how are you"
+      ],
+      [
+        "en",
+        "how are you doing"
+      ],
+      [
+        "en",
+        "how is it going"
+      ],
+      [
+        "en",
+        "what is your name"
+      ],
+      [
+        "en",
+        "who are you"
+      ],
+      [
+        "en",
+        "what do you do"
+      ],
+      [
+        "en",
+        "I love this"
+      ],
+      [
+        "en",
+        "this is great"
+      ],
+      [
+        "en",
+        "I like you"
+      ],
+      [
+        "en",
+        "you are awesome"
+      ],
+      [
+        "en",
+        "I hate this"
+      ],
+      [
+        "en",
+        "this is terrible"
+      ],
+      [
+        "en",
+        "I don't like you"
+      ],
+      [
+        "en",
+        "you are awful"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
