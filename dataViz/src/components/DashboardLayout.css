@@ -1,0 +1,113 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow:auto 
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2f3b52;
+    padding: 20px 0;
+    width: 80px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 19px 0;
+}
+
+.sidebar-item:hover {
+    background-color: #1e2a3a;
+}
+
+.bell:hover .sidebar-icon {
+    animation: ring 1s ease-in-out infinite;
+}
+
+@keyframes ring {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.sidebar-item:not(.bell):hover {
+    transform: translateY(-5px);
+}
+
+.sidebar-icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.reorder-button {
+    margin-top: auto;
+}
+
+.main-content {
+    flex-grow: 1;
+    margin-left: 80px;
+    overflow-y: auto;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #185da2;
+    border-bottom: 1px solid #e9efea;
+  }
+
+.dashboard-heading-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    margin: 0; 
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-profile-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.user-profile-icon:hover {
+    color: #007bff;
+}

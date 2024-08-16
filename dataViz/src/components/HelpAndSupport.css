@@ -1,0 +1,139 @@
+/* HelpAndSupport.css */
+
+.help-and-support {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.help-and-support h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.support-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.faq-section, .contact-form {
+  width: 48%;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h3, .contact-form h3 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.send-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  align-self: flex-start;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.send-button:active {
+  transform: scale(0.98);
+}
+
+/* FAQ Styles */
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-answer {
+  color: #666;
+  padding-left: 15px;
+  border-left: 2px solid #007bff;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .support-content {
+    flex-direction: column;
+  }
+
+  .faq-section, .contact-form {
+    width: 100%;
+  }
+}
+
+/* Additional Styles */
+.help-and-support p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.contact-info {
+  margin-top: 30px;
+  text-align: center;
+  color: #666;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}

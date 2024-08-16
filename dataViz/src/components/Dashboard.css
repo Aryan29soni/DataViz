@@ -1,0 +1,325 @@
+.dashboard {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.dashboard h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header label {
+  margin-right: 20px;
+}
+
+.dashboard-header select,
+.chart-type-selector select,
+.month-industry-selector select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.chart-type-selector,
+.month-industry-selector {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.dashboard-content {
+  display: flex;
+  flex: 1;
+}
+
+.charts-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.chart {
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+  min-width: 400px;
+  max-width: 600px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+}
+
+.chart:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.download-section {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.big-download-button {
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  border: rgb(102, 47, 255);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+.big-download-button:hover {
+  background-color: #327535;
+}
+
+.big-download-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.408);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.share-menu {
+  background: rgb(36, 50, 161);
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.share-button {
+  background: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.share-icon {
+  margin-right: 10px;
+  font-size: 24px;
+  text-align: center;
+  align-items: center;
+}
+
+.share-button:hover {
+  background-color: #f0f0f0;
+}
+
+.axis-title {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.h-axis-title {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.v-axis-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.axis-title input {
+  font-size: 14px;
+  padding: 2px 5px;
+  width: 150px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #2e355e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #302f6955;
+}
+
+.chart-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+.three-dot-menu {
+  cursor: pointer;
+}
+
+.menu-options {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: rgb(62, 17, 187);
+  border: 1px solid #180f5c;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+.chart-menu:hover .menu-options {
+  display: block;
+}
+
+.menu-options button {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-options button:hover {
+  background-color: #14105a;
+}
+
+.edit-popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.edit-popup-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.edit-popup-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.edit-popup-header button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.edit-table {
+  width: 100%;
+}
+
+.edit-table td {
+  padding: 10px;
+}
+
+.text-analysis-charts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.edit-table input {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.expanded-chart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.expanded-chart-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.expanded-chart {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+.chart.editing .axis-title {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}

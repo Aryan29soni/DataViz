@@ -1,0 +1,160 @@
+.notifications {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .notifications h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .no-notifications {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .notification-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .notification-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .notification-item.unread {
+    background-color: #f0f7ff;
+  }
+  
+  .notification-item .icon {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #007bff;
+  }
+  
+  .notification-item .icon.success {
+    color: #28a745;
+  }
+  
+  .notification-item .icon.warning {
+    color: #ffc107;
+  }
+  
+  .notification-item .icon.info {
+    color: #17a2b8;
+  }
+  
+  .notification-content {
+    flex-grow: 1;
+  }
+  
+  .notification-content h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .notification-content p {
+    margin: 0 0 5px;
+    color: #666;
+  }
+  
+  .notification-time {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .notification-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .notification-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #007bff;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+  }
+  
+  .notification-actions button:hover {
+    color: #0056b3;
+  }
+  
+  .notification-actions button svg {
+    margin-right: 5px;
+  }
+  
+  .mark-read-btn {
+    color: #28a745;
+  }
+  
+  .mark-read-btn:hover {
+    color: #218838;
+  }
+  
+  .delete-btn {
+    color: #dc3545;
+  }
+  
+  .delete-btn:hover {
+    color: #c82333;
+  }
+
+  .Toastify__toast {
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .Toastify__toast--success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .Toastify__toast--info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+  }
+  
+  .Toastify__toast--warning {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .Toastify__toast--error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .notification-item {
+      flex-direction: column;
+    }
+  
+    .notification-item .icon {
+      margin-bottom: 10px;
+    }
+  
+    .notification-actions {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }

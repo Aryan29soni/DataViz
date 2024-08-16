@@ -1,0 +1,46 @@
+.databases-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa; 
+}
+
+.databases-card {
+  width: 60%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.card-heading {
+  margin-bottom: 20px;
+}
+
+.files-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.file-number {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.file-name {
+  font-size: 1.1rem;
+}

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+
+.home-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #261f2e;
+}
+
+.sections-container {
+  display: flex;
+  height: calc(100vh - 80px);
+
+}
+
+.section {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(249, 4, 4);
+  font-size: 2rem;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  font-family: 'Oswald', sans-serif;
+}
+
+.section.reports {
+  background-image: url('/images/reports.jpg'); 
+}
+
+.section.databases {
+  background-image: url('/images/databases.jpg'); 
+}
+
+.section .section-heading {
+  z-index: 1;
+  padding: 10px 20px;
+  border: 2px solid aqua;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 3rem; 
+  color: white;
+  background-color: #007bff;
+  width: 100%;
+}
+
+.section.reports:hover {
+  opacity: 1;
+}
+
+.section.reports:hover ~ .section.databases {
+  opacity: 0.4;
+}
+
+.section.databases:hover {
+  opacity: 1;
+}
+
+.section.databases:hover ~ .section.reports {
+  opacity: 0.4;
+}
+
+.section.active .section-heading {
+  background-color: rgb(0, 255, 255);
+}
+
+.menu {
+  position: absolute;
+  top: calc(50% + 47px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 96%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  z-index: 2;
+}
+
+.menu-item {
+  margin: 10px 0;
+  text-align: center;
+}
