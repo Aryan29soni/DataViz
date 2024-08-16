@@ -30,18 +30,16 @@ This project is a comprehensive full-stack application designed for data visuali
 │   ├── public/              
 │   └── src/
 │       ├── components/      # React components
-│       ├── contexts/        # Context API for state management
-│       ├── hooks/           # Custom React Hooks
-│       ├── pages/           # Application pages
 │       ├── App.jsx          # Main App component
+│       ├── Axios.jsx        # Backend communication 
 │       ├── index.js         # Entry point for React
 │       └── ...
 ├── server/                  # Backend (NestJS)
 │   ├── src/
 │       ├── auth/            # Authentication module
-│       ├── common/          # Common utilities and middleware
+│       ├── mailer/          # Common utilities and middleware
 │       ├── database/        # TypeORM entities and database connection
-│       ├── modules/         # Various NestJS modules
+│       ├── chatbot/         # Various NestJS modules
 │       ├── main.ts          # Entry point for the backend
 │       └── ...
 ├── .env                     # Environment variables
